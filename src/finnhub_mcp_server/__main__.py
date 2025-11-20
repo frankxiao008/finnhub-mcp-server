@@ -1,0 +1,10 @@
+#!/usr/bin/env python3
+"""
+Main entry point for the Finnhub MCP Server package.
+"""
+
+from . import main
+
+if __name__ == "__main__":
+    import asyncio
+    asyncio.run(main())
