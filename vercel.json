@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/mcp",
+      "dest": "dist/index.js",
+      "methods": ["POST"]
+    },
+    {
+      "src": "/health",
+      "dest": "dist/index.js",
+      "methods": ["GET"]
+    }
+  ],
+  "env": {
+    "TRANSPORT": "http",
+    "NODE_ENV": "production"
+  }
+}
